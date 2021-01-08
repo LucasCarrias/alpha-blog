@@ -8,6 +8,6 @@ class User < ApplicationRecord
                     length: { maximum: 105 },
                     format: { with: VALID_EMAIL_REGEX }
 
-  has_many :articles
+  has_many :articles, dependent: :destroy
   has_secure_password
 end
