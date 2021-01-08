@@ -10,4 +10,11 @@ module ApplicationHelper
     image_tag(gravatar_url, alt: user.username, class: "rounded shadow mx-auto d-block")
   end
 
+  def flash_color(name)
+    if name == "notice"
+      return "success"
+    elsif name == "alert"
+      return "danger"
+    end
+  end
 end
